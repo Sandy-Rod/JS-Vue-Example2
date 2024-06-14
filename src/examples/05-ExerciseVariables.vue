@@ -1,11 +1,39 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      postIt: 'lineas de un post-it',
+      arrayString : ['uno', 'dos', 'tres']
+    }
   }
 }
 </script>
 
+
+
+
 <template>
-  <p>This is a sandbox, start creating your exercise!</p>
+  <div name="divPostit">
+      {{ postIt }}
+  </div>
+
+  <br>
+
+  <div name="arrayString">
+    
+
+      {{ arrayString.join("-") }}
+  </div>
+
+
 </template>
+
+<style scoped>
+br {
+  color: green;
+}
+div {
+  font-weight: bold;
+  color: red;
+}
+</style>
