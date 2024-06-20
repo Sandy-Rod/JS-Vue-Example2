@@ -21,9 +21,7 @@ export default {
 </script>
 
 <template>
- 
- 
- <p>This is a sandbox, start creating your exercise!</p>
+  <p>This is a sandbox, start creating your exercise!</p>
 </template>
 
 

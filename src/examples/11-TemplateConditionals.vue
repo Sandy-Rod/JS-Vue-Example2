@@ -1,3 +1,6 @@
+<!-- Crear un visor de imagenes, que dependiendo del pais que seleccione el usuario (pueden ser
+botones los paises), muestre una imagen u otra, usando condicionales en los templates.
+ -->
 <script>
   export default {
     data() {
@@ -55,7 +58,7 @@
   </div>
 
 
-    <div :class="styleFlag" v-if="Pais === countries[0].name"> <img :src="src"/> </div>
+   <div :class="styleFlag" v-if="Pais === countries[0].name"> <img :src="src"/> </div> 
 
     <div :class="styleFlag" v-else-if="Pais === countries[1].name"> <img :src="src"/> </div>
 
