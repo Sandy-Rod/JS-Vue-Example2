@@ -16,8 +16,16 @@ export default {
         {id:'5' ,name: 'Grecia', bandera: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg'}
       ],
       styleFlag: 'flagStyle',
+      idRemove: 0
 
 
+    }
+  },
+  methods: {
+    eliminar(id) {
+      console.log(id)
+      this.countries.splice(id, 1)
+      
     }
   }
 }
@@ -45,7 +53,7 @@ export default {
 
 
   <ul>
-    <img v-for="(country, key, index) in countries" :key="country" :class="styleFlag" :src="country.bandera" :alt="country.name" />
+    <img v-for="(country, index) in countries" :key="country" :class="styleFlag" :src="country.bandera" :alt="country.name" @click="eliminar(country)" />
   </ul>
 
 
@@ -56,7 +64,7 @@ export default {
 <style>
     .buttonStyle {
     font-size: 15px;
-    background-color: aquamarine;
+    background-color: rgb(114, 215, 182);
     width: 100px;
     height: 100px;
     padding: 10px;
